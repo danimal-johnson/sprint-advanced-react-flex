@@ -10,13 +10,6 @@ class PlayerList extends React.Component {
 
   componentDidMount(props) {
 
-    // Data format:
-    // { "name": "Alex Morgan",
-    //   "country": "United States",
-    //   "searches": 100,
-    //   "id": 0 
-    // },
-
     axios.get("http://localhost:5000/api/players")
     .then (res => {
       console.log(res.data);
@@ -29,14 +22,15 @@ class PlayerList extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-
+    // We read the data once, so currently nothing changes in this app.
   }
 
 
   render () {
     return (
       <div className="player-list">
-        {/* TODO: Map over list here and create Players key = id */}
+          {this.state.players.map(player => 
+            (<PlayerCard player={player} key={player.id} />))}
         <PlayerCard />
       </div>
     )

@@ -8,7 +8,9 @@
 2. Updating (life): The component is active and re-rendering as state changes.
 3. Unmounting (death) - The component is removed from the screen. In class components, `componentWillUnmount()` can be called if cleanup is necessary.
 
-- [ ] What is the purpose of a custom hook?
+- [x] What is the purpose of a custom hook?
+
+> Custom hooks provide extra functionality. Some examples are grouping items together or creating data persistence with session storage or local storage.
 
 
 - [x] Why is it important to test our apps?
