@@ -3,23 +3,32 @@ import axios from 'axios';
 import PlayerCard from './PlayerCard';
 
 class PlayerList extends React.Component {
-  construcor () {
+  constructor () {
     super();
-    // TODO: Set state here
+    this.state = {players: []};
   }
 
   componentDidMount(props) {
 
-    // TODO: Make API call here. Data format:
+    // Data format:
     // { "name": "Alex Morgan",
     //   "country": "United States",
     //   "searches": 100,
     //   "id": 0 
     // },
 
+    axios.get("http://localhost:5000/api/players")
+    .then (res => {
+      console.log(res.data);
+      this.setState({players: res.data});
+    })
+    .catch(err => {
+      console.error("Error fetching playerlist:", err);
+    });
+
   }
 
-  componentDidUPdate(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
 
   }
 
@@ -28,9 +37,10 @@ class PlayerList extends React.Component {
     return (
       <div className="player-list">
         {/* TODO: Map over list here and create Players key = id */}
-      </>
+        <PlayerCard />
+      </div>
     )
   }
-
-
 }
+
+export default PlayerList;

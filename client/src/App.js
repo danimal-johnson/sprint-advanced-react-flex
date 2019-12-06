@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './components/PlayerList';
+import PlayerList from './components/PlayerList';
 
 import './App.css';
 
