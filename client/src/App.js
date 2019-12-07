@@ -14,10 +14,11 @@ function App() {
   return (
     <div className="App" id="App">
       <header className="App-header">
+        <div>{/* logo */}</div>
         <h1>Women's World Cup - 2019</h1>
         <button onClick={toggleDark}>Dark Mode</button>
       </header>
-      <PlayerList />  
+      <PlayerList />
     </div>
   );
 }
