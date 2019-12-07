@@ -1,16 +1,29 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: white;
+}
+
 .App {
   text-align: center;
+  color: black;
+  background-color: white;
 }
 
 .App-header {
   background-color: #282c34;
-  max-height: 4rem;
+  min-height: 4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  font-size: 2.2rem;
   color: white;
+}
+.App-header h1 {
+  font-size: 3.3rem;
 }
 
 .App-header button {
@@ -31,24 +44,31 @@
 
 .player-card {
   width: 200px;
-  border: 1px solid white;
+  border: 1px solid black;
   margin: 10px;
   border-radius: 5px;
   padding: 5px;
 }
 
 .player-name {
-  font-size: 1.4rem;  
+  font-size: 2rem;
+  font-weight: bold;
 }
 .player-country {
   font-style: italic;
+  font-size: 1.6rem;
 }
 .player-searches {
-  
+  font-size: 1.6rem;
 }
 
 /* Dark Mode adjustments */
-.player-list, .player-card, .darkable, .dark-mode {
+.player-list.dark-mode,
+.darkable.dark-mode {
   color: white;
   background-color: #282c34;
+}
+
+.player-list.dark-mode .player-card {
+  border: 1px solid hotpink;
 }
