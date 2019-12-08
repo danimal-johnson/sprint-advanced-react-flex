@@ -12,7 +12,7 @@ class PlayerList extends React.Component {
 
     axios.get("http://localhost:5000/api/players")
     .then (res => {
-      console.log(res.data);
+      // console.log(res.data);
       this.setState({players: res.data});
     })
     .catch(err => {
@@ -31,7 +31,6 @@ class PlayerList extends React.Component {
       <div className="player-list">
           {this.state.players.map(player => 
             (<PlayerCard player={player} key={player.id} />))}
-        <PlayerCard />
       </div>
     )
   }
